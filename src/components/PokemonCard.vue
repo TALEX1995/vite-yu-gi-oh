@@ -30,7 +30,9 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/scss/vars' as *;
+
 img {
     width: 300px;
     height: 300px;
@@ -42,14 +44,14 @@ span {
 }
 
 .red {
-    color: red;
+    color: $red;
 }
 
 .green {
-    color: green;
+    color: $green;
 }
 
 .blue {
-    color: blue;
+    color: $blue;
 }
 </style>
