@@ -14,7 +14,8 @@ export default {
 </script>
 
 <template>
-    <div class="row row-cols-2">
+    <div v-if="store.isLoading" class="fs-1">LOADING ...</div>
+    <div v-else class="row row-cols-2">
         <div v-for="{ imageUrl, name, type1, type2, color, generation, hp, atk, def } in store.pokemons" class="col d-flex">
             <PokemonCard :pokemonImg="imageUrl" :name="name" :type1="type1" :type2="type2" :color="color"
                 :generation="generation" :hp="hp" :atk="atk" :def="def" />

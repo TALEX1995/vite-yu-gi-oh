@@ -9,8 +9,12 @@ export default {
 
     created() {
         axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons').then(res => {
+            store.isLoading = true;
             store.pokemons = res.data.docs;
-
+        }).catch(err => {
+            console.log(err.message)
+        }).then(() => {
+            store.isLoading = false
         })
     }
 }
