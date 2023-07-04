@@ -65,8 +65,10 @@ export default {
         <TextFilter placeholder="Inserisci il nome del Pokemon" @form-submit="nameFilterPokemon" />
         <button class="btn btn-primary ms-3" @click="resetPokemonFilter">Resetta</button>
     </div>
+
     <!-- Loader -->
     <div v-if="store.isLoading" class="fs-1">LOADING ...</div>
+
     <!-- Pokemon Card -->
     <div v-else class="row row-cols-2">
         <div v-for="{ imageUrl, name, type1, type2, color, generation, hp, atk, def } in store.pokemons" class="col d-flex">
