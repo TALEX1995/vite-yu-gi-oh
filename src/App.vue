@@ -15,6 +15,12 @@ export default {
             console.log(err.message)
         }).then(() => {
             store.isLoading = false
+        });
+
+        axios.get('https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons/types1').then(res => {
+            store.pokemonType = res.data
+        }).catch(err => {
+            console.log(err.message)
         })
     }
 }
