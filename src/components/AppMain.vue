@@ -30,6 +30,10 @@ export default {
         }
     },
 
+    methods: {
+
+    },
+
     components: { PokemonCard, FilterSelect }
 }
 </script>
